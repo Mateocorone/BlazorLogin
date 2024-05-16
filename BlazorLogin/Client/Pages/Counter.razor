@@ -1,0 +1,24 @@
+﻿@page "/counter"
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize]
+
+
+<PageTitle>Contador</PageTitle>
+
+<h1>Contador</h1>
+<p>Vista para Administrador y Empleado</p>
+<img src="https://www.syncfusion.com/blogs/wp-content/uploads/2021/07/Blazor-Forms-and-Form-Validation-Built-in-Custom-A-Beginners-Guide-1.png" width="500" height="300" />
+<br />
+<br />
+<h3 role="status"># Veces Clickeadas: @currentCount</h3>
+<br />
+<button class="btn btn-primary" @onclick="IncrementCount">Presioname</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

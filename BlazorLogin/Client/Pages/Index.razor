@@ -1,0 +1,20 @@
+﻿@page "/Index"
+
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.AspNetCore.Components.Authorization;
+@attribute [Authorize]
+
+
+<PageTitle>Index</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <br />
+        <h1>Bienvenido @context.User.Identity!.Name</h1>
+        <br />
+        <img src="https://user-images.githubusercontent.com/51463755/80991179-40b3f800-8dfd-11ea-87b5-064aaf538e33.png" width="1000"height="500" />
+    </Authorized>
+</AuthorizeView>
+
+
+
